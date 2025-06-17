@@ -4,11 +4,11 @@
 
 // loop through and display each of the books on my page 
 
-
+const BASE_URL = `https://monorepo-demo-server.onrender.com`
 const app = document.getElementById('app')
 
 async function fetchBooks() {
-  const res = await fetch(`http://localhost:8060/books`)
+  const res = await fetch(`${BASE_URL}/books`)
   const books = await res.json()
   console.log(books)
 
